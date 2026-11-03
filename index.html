@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="WDD 131 – Dynamic Web Fundamentals home page for Julius Conteh, featuring personal information, Sierra Leone, and web development resources.">
+
+    <meta name="author" content="Julius Conteh">
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Julius Conteh</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto+Slab:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- External JavaScript -->
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+
+        <nav aria-label="Main navigation">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
+
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
+                rel="noopener noreferrer">Scripture</a>
+
+            <a href="final-project/">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>Julius Conteh</h1>
+
+        <div class="content-layout">
+
+            <!-- About Me Card -->
+            <section class="card about-card">
+
+                <h2>About Me</h2>
+
+                <div class="about-introduction">
+
+                    <p>
+                        My name is Julius Conteh. I am interested in economics,
+                        banking, and technology. I enjoy learning new skills
+                        and discovering how technology can solve real-world
+                        problems. Through WDD 131, I am developing my knowledge
+                        of HTML, CSS, and JavaScript to build useful and
+                        accessible websites.
+                    </p>
+
+                    <img class="portrait" src="images/julius.jpg" alt="Portrait of Julius Conteh" width="120"
+                        height="150">
+
+                </div>
+
+                <!-- Country Information -->
+                <div class="country-section">
+
+                    <h3>Sierra Leone</h3>
+
+                    <div class="country-content">
+
+                        <figure>
+                            <img src="images/sierra-leone-flag.png" alt="National flag of Sierra Leone" width="160"
+                                height="96">
+
+                            <figcaption>
+                                Official Flag of Sierra Leone
+                            </figcaption>
+                        </figure>
+
+                        <p>
+                            Sierra Leone is a country in West Africa, located
+                            along the Atlantic coast. Its capital city is
+                            Freetown. The country is known for its beautiful
+                            beaches, diverse cultures, rich natural resources,
+                            and agricultural potential. Tourism, mining,
+                            agriculture, education, and technology can all
+                            contribute to its economic development.
+                        </p>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Web Development Resources Card -->
+            <section class="card resources-card">
+
+                <h2>Web Dev Resources</h2>
+
+                <ul>
+                    <li>
+                        <a href="https://dev.to/" target="_blank" rel="noopener noreferrer">
+                            Dev.to Community
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener noreferrer">
+                            Smashing Magazine
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">
+                            CSS Tricks
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
+                            W3Schools
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">
+                            Udemy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://picsum.photos/" target="_blank" rel="noopener noreferrer">
+                            Lorem Picsum Image Placeholder
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy;<span id="currentyear"></span>
+            Julius Conteh
+            <span class="flower" aria-hidden="true">✿</span>
+            Sierra Leone
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+    <p class="page-caption">WDD 131 – Home Page</p>
+
+</body>
+
+</html>
