@@ -1,15 +1,14 @@
 ```css
-/* =========================================
+/* =====================================================
    WDD 131 – Dynamic Web Fundamentals
    Author: Julius Conteh
-   W01 Home Page
-   ========================================= */
+   Assignment: W01 Home Page
+   ===================================================== */
 
-/* Google Fonts are loaded in index.html */
 
-/* =========================================
-   CSS VARIABLES
-   ========================================= */
+/* =====================================================
+   1. CSS VARIABLES
+   ===================================================== */
 
 :root {
     --primary-color: #204f70;
@@ -25,9 +24,10 @@
     --body-font: "Open Sans", Arial, sans-serif;
 }
 
-/* =========================================
-   GENERAL STYLES
-   ========================================= */
+
+/* =====================================================
+   2. GENERAL STYLES
+   ===================================================== */
 
 * {
     box-sizing: border-box;
@@ -35,8 +35,9 @@
 
 body {
     margin: 0 auto;
-    max-width: 1200px;
     padding: 0 20px;
+
+    max-width: 1200px;
 
     font-family: var(--body-font);
     font-size: 12px;
@@ -46,17 +47,21 @@ body {
     background-color: var(--background-color);
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
+
+/* =====================================================
+   3. HEADER
+   ===================================================== */
 
 header {
-    margin-top: 0;
+    margin: 0;
     color: #ffffff;
 }
 
+/* Required: Course title must display as a block. */
+
 #course-title {
     display: block;
+
     padding: 9px 10px;
 
     background-color: var(--primary-color);
@@ -64,15 +69,18 @@ header {
     font-family: var(--heading-font);
     font-size: 15px;
     font-weight: 500;
+
     text-align: center;
 }
 
-/* =========================================
-   NAVIGATION
-   ========================================= */
+
+/* =====================================================
+   4. NAVIGATION - CSS FLEXBOX
+   ===================================================== */
 
 nav {
     display: flex;
+
     justify-content: space-around;
     align-items: stretch;
 
@@ -83,16 +91,22 @@ nav a {
     flex: 1;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    min-height: 28px;
+    min-height: 32px;
     padding: 5px 8px;
 
     color: #ffffff;
+
     text-decoration: none;
     text-align: center;
+
     font-size: 11px;
+    font-weight: 500;
+
+    /* Reserve border space to prevent layout shifts. */
 
     border-bottom: 2px solid transparent;
 
@@ -102,47 +116,56 @@ nav a {
         border-color 0.2s ease;
 }
 
+
 /* Navigation hover effect */
 
 nav a:hover {
     color: #17252a;
+
     background-color: var(--accent-color);
+
     border-bottom-color: #086b68;
 }
 
-/* Keyboard navigation accessibility */
+
+/* Keyboard accessibility */
 
 nav a:focus-visible {
     outline: 2px solid var(--accent-color);
     outline-offset: -3px;
 }
 
-/* =========================================
-   MAIN CONTENT
-   ========================================= */
+
+/* =====================================================
+   5. MAIN CONTENT - CENTERED AND LIMITED WIDTH
+   ===================================================== */
 
 main {
-    margin: 15px auto 12px;
     max-width: 1000px;
+
+    margin: 15px auto 12px;
 }
 
-/* Main heading */
+
+/* Main page heading */
 
 h1 {
     margin: 0 0 12px;
 
-    color: #252525;
+    color: var(--text-color);
 
     font-family: var(--heading-font);
     font-size: 22px;
     font-weight: 500;
+
     line-height: 1.4;
     text-align: center;
 }
 
-/* =========================================
-   TWO-COLUMN GRID LAYOUT
-   ========================================= */
+
+/* =====================================================
+   6. MAIN CARDS - CSS GRID
+   ===================================================== */
 
 .content-layout {
     display: grid;
@@ -150,12 +173,14 @@ h1 {
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 
     gap: 5px;
+
     align-items: stretch;
 }
 
-/* =========================================
-   CARD STYLING
-   ========================================= */
+
+/* =====================================================
+   7. CARD DESIGN
+   ===================================================== */
 
 .card {
     min-width: 0;
@@ -167,10 +192,12 @@ h1 {
     border-radius: 6px;
 }
 
+
 /* Card headings */
 
 .card h2 {
     margin: 0;
+
     padding: 5px 8px;
 
     color: #ffffff;
@@ -179,13 +206,15 @@ h1 {
     font-family: var(--heading-font);
     font-size: 11px;
     font-weight: 600;
+
     line-height: 1.6;
     text-align: center;
 }
 
-/* =========================================
-   ABOUT ME SECTION
-   ========================================= */
+
+/* =====================================================
+   8. ABOUT ME SECTION
+   ===================================================== */
 
 .about-introduction {
     display: grid;
@@ -193,6 +222,7 @@ h1 {
     grid-template-columns: minmax(0, 1fr) 82px;
 
     gap: 12px;
+
     align-items: start;
 
     padding: 11px 10px 0;
@@ -201,6 +231,7 @@ h1 {
 .about-introduction p {
     margin: 3px 0 0;
 }
+
 
 /* Personal portrait */
 
@@ -216,13 +247,15 @@ h1 {
     border: 1px solid var(--border-color);
 }
 
-/* =========================================
-   COUNTRY SECTION
-   ========================================= */
+
+/* =====================================================
+   9. SIERRA LEONE SECTION
+   ===================================================== */
 
 .country-section {
     margin: 7px 10px 10px;
 }
+
 
 /* Country heading */
 
@@ -230,6 +263,7 @@ h1 {
     max-width: 65%;
 
     margin: 0 auto 9px;
+
     padding-bottom: 2px;
 
     border-bottom: 1px solid #dddddd;
@@ -237,8 +271,10 @@ h1 {
     font-family: var(--heading-font);
     font-size: 11px;
     font-weight: 600;
+
     text-align: center;
 }
+
 
 /* Country information layout */
 
@@ -248,19 +284,20 @@ h1 {
     grid-template-columns: 92px minmax(0, 1fr);
 
     gap: 12px;
+
     align-items: start;
 }
 
-/* Country flag figure */
+
+/* Country flag */
 
 .country-content figure {
     margin: 0;
+
     padding-top: 3px;
 
     text-align: center;
 }
-
-/* Country flag */
 
 .country-content img {
     display: block;
@@ -273,6 +310,7 @@ h1 {
     border: 1px solid var(--border-color);
 }
 
+
 /* Flag caption */
 
 .country-content figcaption {
@@ -282,8 +320,10 @@ h1 {
 
     font-size: 9px;
     font-style: italic;
+
     line-height: 1.5;
 }
+
 
 /* Country description */
 
@@ -291,24 +331,29 @@ h1 {
     margin: 0;
 }
 
-/* =========================================
-   WEB DEVELOPMENT RESOURCES
-   ========================================= */
+
+/* =====================================================
+   10. WEB DEVELOPMENT RESOURCES
+   ===================================================== */
 
 .resources-card ul {
     margin: 72px 10px 20px;
+
     padding-left: 17px;
 }
 
 .resources-card li {
     padding-left: 0;
+
     line-height: 1.7;
 }
+
 
 /* Resource links */
 
 .resources-card a {
     color: #0000ee;
+
     text-decoration: underline;
 }
 
@@ -321,18 +366,21 @@ h1 {
     outline-offset: 2px;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+
+/* =====================================================
+   11. FOOTER
+   ===================================================== */
 
 footer {
     margin-top: 10px;
+
     padding: 8px 10px;
 
     color: #ffffff;
     background-color: var(--footer-color);
 
     text-align: center;
+
     font-size: 10px;
     line-height: 1.6;
 }
@@ -341,19 +389,24 @@ footer p {
     margin: 2px 0;
 }
 
+
 /* Decorative flower */
 
 .flower {
     color: #ffb7d5;
+
     font-size: 12px;
 }
+
 
 /* Last modified date */
 
 #lastModified {
     color: #fff176;
+
     font-size: 9px;
 }
+
 
 /* Caption below footer */
 
@@ -366,9 +419,10 @@ footer p {
     text-align: center;
 }
 
-/* =========================================
-   TABLET RESPONSIVE DESIGN
-   ========================================= */
+
+/* =====================================================
+   12. TABLET RESPONSIVE DESIGN
+   ===================================================== */
 
 @media screen and (max-width: 700px) {
 
@@ -378,11 +432,13 @@ footer p {
 
     .content-layout {
         grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+
         gap: 8px;
     }
 
     .about-introduction {
         grid-template-columns: minmax(0, 1fr) 75px;
+
         gap: 8px;
     }
 
@@ -393,6 +449,7 @@ footer p {
 
     .country-content {
         grid-template-columns: 80px minmax(0, 1fr);
+
         gap: 8px;
     }
 
@@ -405,20 +462,23 @@ footer p {
     }
 }
 
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-   ========================================= */
+
+/* =====================================================
+   13. MOBILE RESPONSIVE DESIGN
+   ===================================================== */
 
 @media screen and (max-width: 520px) {
 
     body {
         padding: 0 10px;
+
         font-size: 12px;
     }
 
     #course-title {
         font-size: 14px;
     }
+
 
     /* Mobile navigation */
 
@@ -428,22 +488,32 @@ footer p {
 
     nav a {
         flex: 1 1 50%;
+
         min-height: 38px;
     }
+
+
+    /* Main heading */
 
     h1 {
         font-size: 21px;
     }
 
+
     /* Stack cards vertically */
 
     .content-layout {
         grid-template-columns: minmax(0, 1fr);
+
         gap: 12px;
     }
 
+
+    /* About Me */
+
     .about-introduction {
         grid-template-columns: minmax(0, 1fr) 90px;
+
         gap: 12px;
     }
 
@@ -452,8 +522,12 @@ footer p {
         height: 115px;
     }
 
+
+    /* Country section */
+
     .country-content {
         grid-template-columns: 100px minmax(0, 1fr);
+
         gap: 12px;
     }
 
@@ -465,14 +539,19 @@ footer p {
         max-width: 80%;
     }
 
+
+    /* Resources */
+
     .resources-card ul {
         margin: 15px 12px 20px;
     }
+
 }
 
-/* =========================================
-   REDUCED MOTION ACCESSIBILITY
-   ========================================= */
+
+/* =====================================================
+   14. REDUCED MOTION ACCESSIBILITY
+   ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
