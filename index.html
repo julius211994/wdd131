@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Required document metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals home page for Julius Conteh, featuring personal information, Sierra Leone, and web development resources.">
+        content="WDD 131 – Dynamic Web Fundamentals home page for Julius Conteh, featuring personal information, Sierra Leone, web development resources, and learning activities.">
 
     <meta name="author" content="Julius Conteh">
 
+    <!-- Required page title -->
     <title>WDD 131 – Dynamic Web Fundamentals – Julius Conteh</title>
 
     <!-- Google Fonts -->
@@ -23,34 +25,61 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles/base.css">
 
-    <!-- External JavaScript -->
+    <!-- Required JavaScript reference in the head with defer -->
     <script src="scripts/getdates.js" defer></script>
+
 </head>
 
 <body>
 
+    <!-- =================================
+         HEADER
+         ================================= -->
+
     <header>
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
 
+        <!-- Required course heading -->
+        <span id="course-title">
+            WDD 131 – Dynamic Web Fundamentals
+        </span>
+
+        <!-- Required navigation links -->
         <nav aria-label="Main navigation">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
 
-            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
-                rel="noopener noreferrer">Scripture</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener noreferrer">
+                Canvas
+            </a>
 
-            <a href="final-project/">Final Project</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener noreferrer">
+                Scripture
+            </a>
+
+            <a href="final-project/">
+                Final Project
+            </a>
+
         </nav>
+
     </header>
+
+
+    <!-- =================================
+         MAIN CONTENT
+         ================================= -->
 
     <main>
 
+        <!-- Required main heading -->
         <h1>Julius Conteh</h1>
 
         <div class="content-layout">
 
-            <!-- About Me Card -->
+            <!-- FIRST SECTION: ABOUT ME -->
+
             <section class="card about-card">
 
                 <h2>About Me</h2>
@@ -58,20 +87,24 @@
                 <div class="about-introduction">
 
                     <p>
-                        My name is Julius Conteh. I am interested in economics,
-                        banking, and technology. I enjoy learning new skills
+                        My name is Julius Conteh. I am an economist and banker
+                        with a strong interest in development, economics,
+                        finance, and technology. I enjoy learning new skills
                         and discovering how technology can solve real-world
                         problems. Through WDD 131, I am developing my knowledge
                         of HTML, CSS, and JavaScript to build useful and
                         accessible websites.
                     </p>
 
+                    <!-- Local personal image -->
                     <img class="portrait" src="images/julius.jpg" alt="Portrait of Julius Conteh" width="120"
                         height="150">
 
                 </div>
 
-                <!-- Country Information -->
+
+                <!-- Country information -->
+
                 <div class="country-section">
 
                     <h3>Sierra Leone</h3>
@@ -79,12 +112,15 @@
                     <div class="country-content">
 
                         <figure>
+
+                            <!-- Local Sierra Leone flag image -->
                             <img src="images/sierra-leone-flag.png" alt="National flag of Sierra Leone" width="160"
                                 height="96">
 
                             <figcaption>
                                 Official Flag of Sierra Leone
                             </figcaption>
+
                         </figure>
 
                         <p>
@@ -98,16 +134,20 @@
                         </p>
 
                     </div>
+
                 </div>
 
             </section>
 
-            <!-- Web Development Resources Card -->
+
+            <!-- SECOND SECTION: WEB DEVELOPMENT RESOURCES -->
+
             <section class="card resources-card">
 
                 <h2>Web Dev Resources</h2>
 
                 <ul>
+
                     <li>
                         <a href="https://dev.to/" target="_blank" rel="noopener noreferrer">
                             Dev.to Community
@@ -143,6 +183,7 @@
                             Lorem Picsum Image Placeholder
                         </a>
                     </li>
+
                 </ul>
 
             </section>
@@ -151,8 +192,14 @@
 
     </main>
 
-    <!-- Footer -->
+
+    <!-- =================================
+         FOOTER
+         ================================= -->
+
     <footer>
+
+        <!-- First required paragraph: copyright information -->
 
         <p>
             &copy;<span id="currentyear"></span>
@@ -161,11 +208,17 @@
             Sierra Leone
         </p>
 
+
+        <!-- Second required paragraph: last modified date -->
+
         <p id="lastModified"></p>
 
     </footer>
 
-    <p class="page-caption">WDD 131 – Home Page</p>
+
+    <p class="page-caption">
+        WDD 131 – Dynamic Web Fundamentals
+    </p>
 
 </body>
 

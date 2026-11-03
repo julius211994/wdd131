@@ -122,7 +122,8 @@ nav a:focus-visible {
    ========================================= */
 
 main {
-    margin: 15px 0 12px;
+    margin: 15px auto 12px;
+    max-width: 1000px;
 }
 
 /* Main heading */

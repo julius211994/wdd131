@@ -5,14 +5,17 @@
 // =========================================
 
 
-// Display the current copyright year.
+// Get the current year.
 
-document.getElementById("currentyear").textContent =
-    new Date().getFullYear();
+const currentYear = new Date().getFullYear();
+
+document.getElementById("currentyear").textContent = currentYear;
 
 
-// Display the document's last modified date and time.
+// Get the document's last modified date.
+
+const lastModified = document.lastModified;
 
 document.getElementById("lastModified").textContent =
-    `Last Modification: ${ document.lastModified } `;
+    `Last Modification: ${ lastModified } `;
 ```
