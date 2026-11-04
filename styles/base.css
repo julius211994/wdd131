@@ -1,86 +1,78 @@
-```css
-/* =====================================================
+/* ============================================
    WDD 131 – Dynamic Web Fundamentals
    Author: Julius Conteh
-   Assignment: W01 Home Page
-   ===================================================== */
+   W01 Home Page
+   ============================================ */
 
 
-/* =====================================================
-   1. CSS VARIABLES
-   ===================================================== */
+/* CSS variables */
 
 :root {
-    --primary-color: #204f70;
-    --navigation-color: #303030;
-    --accent-color: #f4d35e;
+    --primary-color: #1d4e70;
+    --navigation-color: #222222;
+    --accent-color: #f2f2f2;
     --background-color: #ffffff;
-    --card-background: #ffffff;
-    --text-color: #252525;
-    --border-color: #c5c5c5;
-    --footer-color: #204f70;
-
-    --heading-font: "Roboto Slab", Georgia, serif;
-    --body-font: "Open Sans", Arial, sans-serif;
+    --text-color: #222222;
+    --border-color: #cccccc;
+    --footer-color: #1d4e70;
 }
 
 
-/* =====================================================
-   2. GENERAL STYLES
-   ===================================================== */
+/* General page styles */
 
 * {
     box-sizing: border-box;
 }
 
 body {
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 
-    max-width: 1200px;
-
-    font-family: var(--body-font);
-    font-size: 12px;
-    line-height: 1.7;
-
     color: var(--text-color);
     background-color: var(--background-color);
+
+    font-family: var(--body-font);
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 
-/* =====================================================
-   3. HEADER
-   ===================================================== */
+/* ============================================
+   HEADER
+   ============================================ */
 
 header {
     margin: 0;
     color: #ffffff;
 }
 
-/* Required: Course title must display as a block. */
+
+/* Course title */
 
 #course-title {
     display: block;
 
-    padding: 9px 10px;
+    padding: 15px 12px;
 
     background-color: var(--primary-color);
 
+    color: #ffffff;
+
     font-family: var(--heading-font);
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 23px;
+    font-weight: 600;
 
     text-align: center;
 }
 
 
-/* =====================================================
-   4. NAVIGATION - CSS FLEXBOX
-   ===================================================== */
+/* ============================================
+   NAVIGATION
+   ============================================ */
 
 nav {
     display: flex;
-
     justify-content: space-around;
     align-items: stretch;
 
@@ -91,24 +83,22 @@ nav a {
     flex: 1;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
-    min-height: 32px;
-    padding: 5px 8px;
+    min-height: 45px;
+    padding: 10px 12px;
 
     color: #ffffff;
 
-    text-decoration: none;
-    text-align: center;
-
-    font-size: 11px;
+    font-size: 15px;
     font-weight: 500;
 
-    /* Reserve border space to prevent layout shifts. */
+    text-align: center;
+    text-decoration: none;
 
-    border-bottom: 2px solid transparent;
+    /* Reserve border space to prevent layout shifts. */
+    border-bottom: 3px solid transparent;
 
     transition:
         background-color 0.2s ease,
@@ -121,75 +111,68 @@ nav a {
 
 nav a:hover {
     color: #17252a;
-
     background-color: var(--accent-color);
-
     border-bottom-color: #086b68;
 }
 
 
-/* Keyboard accessibility */
+/* Keyboard navigation */
 
 nav a:focus-visible {
     outline: 2px solid var(--accent-color);
-    outline-offset: -3px;
+    outline-offset: -4px;
 }
 
 
-/* =====================================================
-   5. MAIN CONTENT - CENTERED AND LIMITED WIDTH
-   ===================================================== */
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
 
 main {
-    max-width: 1000px;
-
-    margin: 15px auto 12px;
+    max-width: 900px;
+    margin: 22px auto;
 }
 
 
-/* Main page heading */
+/* Main heading */
 
 h1 {
-    margin: 0 0 12px;
+    margin: 0 0 20px;
 
     color: var(--text-color);
 
     font-family: var(--heading-font);
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 30px;
+    font-weight: 600;
 
-    line-height: 1.4;
     text-align: center;
 }
 
 
-/* =====================================================
-   6. MAIN CARDS - CSS GRID
-   ===================================================== */
+/* ============================================
+   CARD GRID
+   ============================================ */
 
 .content-layout {
     display: grid;
 
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
 
-    gap: 5px;
-
+    gap: 18px;
     align-items: stretch;
 }
 
 
-/* =====================================================
-   7. CARD DESIGN
-   ===================================================== */
+/* Card appearance */
 
 .card {
     min-width: 0;
     overflow: hidden;
 
-    background-color: var(--card-background);
+    background-color: #ffffff;
 
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 
@@ -197,39 +180,36 @@ h1 {
 
 .card h2 {
     margin: 0;
-
-    padding: 5px 8px;
+    padding: 10px;
 
     color: #ffffff;
     background-color: var(--primary-color);
 
     font-family: var(--heading-font);
-    font-size: 11px;
+    font-size: 19px;
     font-weight: 600;
 
-    line-height: 1.6;
     text-align: center;
 }
 
 
-/* =====================================================
-   8. ABOUT ME SECTION
-   ===================================================== */
+/* ============================================
+   ABOUT ME
+   ============================================ */
 
 .about-introduction {
     display: grid;
 
-    grid-template-columns: minmax(0, 1fr) 82px;
+    grid-template-columns: minmax(0, 1fr) 125px;
 
-    gap: 12px;
-
+    gap: 18px;
     align-items: start;
 
-    padding: 11px 10px 0;
+    padding: 16px;
 }
 
 .about-introduction p {
-    margin: 3px 0 0;
+    margin: 0;
 }
 
 
@@ -238,63 +218,62 @@ h1 {
 .portrait {
     display: block;
 
-    width: 82px;
-    height: 112px;
+    width: 125px;
+    height: 155px;
 
     object-fit: cover;
     object-position: center top;
 
     border: 1px solid var(--border-color);
+    border-radius: 2px;
 }
 
 
-/* =====================================================
-   9. SIERRA LEONE SECTION
-   ===================================================== */
+/* ============================================
+   COUNTRY INFORMATION
+   ============================================ */
 
 .country-section {
-    margin: 7px 10px 10px;
+    margin: 0 16px 18px;
 }
 
 
 /* Country heading */
 
 .country-section h3 {
-    max-width: 65%;
+    width: 70%;
 
-    margin: 0 auto 9px;
+    margin: 0 auto 15px;
+    padding-bottom: 5px;
 
-    padding-bottom: 2px;
-
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #d6d6d6;
 
     font-family: var(--heading-font);
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 600;
 
     text-align: center;
 }
 
 
-/* Country information layout */
+/* Flag and country description */
 
 .country-content {
     display: grid;
 
-    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-columns: 135px minmax(0, 1fr);
 
-    gap: 12px;
-
+    gap: 18px;
     align-items: start;
 }
 
 
-/* Country flag */
+/* Flag figure */
 
 .country-content figure {
     margin: 0;
 
-    padding-top: 3px;
+    padding-top: 4px;
 
     text-align: center;
 }
@@ -302,7 +281,7 @@ h1 {
 .country-content img {
     display: block;
 
-    width: 92px;
+    width: 135px;
     height: auto;
 
     margin: 0 auto;
@@ -314,14 +293,13 @@ h1 {
 /* Flag caption */
 
 .country-content figcaption {
-    margin-top: 5px;
+    margin-top: 6px;
 
-    color: #46545b;
+    color: #454545;
 
-    font-size: 9px;
+    font-size: 12px;
     font-style: italic;
-
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 
@@ -332,29 +310,27 @@ h1 {
 }
 
 
-/* =====================================================
-   10. WEB DEVELOPMENT RESOURCES
-   ===================================================== */
+/* ============================================
+   WEB DEVELOPMENT RESOURCES
+   ============================================ */
 
 .resources-card ul {
-    margin: 72px 10px 20px;
-
-    padding-left: 17px;
+    margin: 28px 18px;
+    padding-left: 22px;
 }
 
 .resources-card li {
-    padding-left: 0;
-
-    line-height: 1.7;
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 
 /* Resource links */
 
 .resources-card a {
-    color: #0000ee;
-
+    color: #0645ad;
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .resources-card a:hover {
@@ -363,124 +339,101 @@ h1 {
 
 .resources-card a:focus-visible {
     outline: 2px solid #086b68;
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 
-/* =====================================================
-   11. FOOTER
-   ===================================================== */
+/* ============================================
+   FOOTER
+   ============================================ */
 
 footer {
-    margin-top: 10px;
-
-    padding: 8px 10px;
+    margin-top: 24px;
+    padding: 15px 12px;
 
     color: #ffffff;
     background-color: var(--footer-color);
 
     text-align: center;
-
-    font-size: 10px;
-    line-height: 1.6;
+    font-size: 14px;
 }
 
 footer p {
-    margin: 2px 0;
+    margin: 4px 0;
 }
 
-
-/* Decorative flower */
-
-.flower {
-    color: #ffb7d5;
-
+#lastModified {
+    color: #ffffff;
     font-size: 12px;
 }
 
 
-/* Last modified date */
+/* ============================================
+   TABLET RESPONSIVE DESIGN
+   ============================================ */
 
-#lastModified {
-    color: #fff176;
-
-    font-size: 9px;
-}
-
-
-/* Caption below footer */
-
-.page-caption {
-    margin: 5px 0 10px;
-
-    color: var(--primary-color);
-
-    font-size: 10px;
-    text-align: center;
-}
-
-
-/* =====================================================
-   12. TABLET RESPONSIVE DESIGN
-   ===================================================== */
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
 
     body {
-        padding: 0 12px;
+        padding: 0 14px;
+    }
+
+    main {
+        margin: 18px auto;
     }
 
     .content-layout {
         grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-
-        gap: 8px;
+        gap: 12px;
     }
 
     .about-introduction {
-        grid-template-columns: minmax(0, 1fr) 75px;
-
-        gap: 8px;
+        grid-template-columns: minmax(0, 1fr) 100px;
+        gap: 12px;
+        padding: 12px;
     }
 
     .portrait {
-        width: 75px;
-        height: 100px;
+        width: 100px;
+        height: 125px;
+    }
+
+    .country-section {
+        margin-right: 12px;
+        margin-left: 12px;
     }
 
     .country-content {
-        grid-template-columns: 80px minmax(0, 1fr);
-
-        gap: 8px;
+        grid-template-columns: 105px minmax(0, 1fr);
+        gap: 12px;
     }
 
     .country-content img {
-        width: 80px;
+        width: 105px;
     }
 
     .resources-card ul {
-        margin-top: 45px;
+        margin: 20px 12px;
+        padding-left: 20px;
     }
 }
 
 
-/* =====================================================
-   13. MOBILE RESPONSIVE DESIGN
-   ===================================================== */
+/* ============================================
+   MOBILE RESPONSIVE DESIGN
+   ============================================ */
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 560px) {
 
     body {
         padding: 0 10px;
-
-        font-size: 12px;
-    }
-
-    #course-title {
         font-size: 14px;
     }
 
-
-    /* Mobile navigation */
+    #course-title {
+        padding: 12px 8px;
+        font-size: 18px;
+    }
 
     nav {
         flex-wrap: wrap;
@@ -488,33 +441,33 @@ footer p {
 
     nav a {
         flex: 1 1 50%;
-
-        min-height: 38px;
+        min-height: 42px;
+        padding: 8px;
+        font-size: 14px;
     }
 
-
-    /* Main heading */
+    main {
+        margin: 18px auto;
+    }
 
     h1 {
-        font-size: 21px;
+        margin-bottom: 15px;
+        font-size: 26px;
     }
-
-
-    /* Stack cards vertically */
 
     .content-layout {
         grid-template-columns: minmax(0, 1fr);
-
-        gap: 12px;
+        gap: 18px;
     }
 
-
-    /* About Me */
+    .card h2 {
+        font-size: 18px;
+    }
 
     .about-introduction {
         grid-template-columns: minmax(0, 1fr) 90px;
-
         gap: 12px;
+        padding: 12px;
     }
 
     .portrait {
@@ -522,12 +475,17 @@ footer p {
         height: 115px;
     }
 
+    .country-section {
+        margin: 0 12px 14px;
+    }
 
-    /* Country section */
+    .country-section h3 {
+        width: 85%;
+        font-size: 17px;
+    }
 
     .country-content {
         grid-template-columns: 100px minmax(0, 1fr);
-
         gap: 12px;
     }
 
@@ -535,30 +493,161 @@ footer p {
         width: 100px;
     }
 
-    .country-section h3 {
-        max-width: 80%;
+    .country-content figcaption {
+        font-size: 11px;
     }
-
-
-    /* Resources */
 
     .resources-card ul {
-        margin: 15px 12px 20px;
+        margin: 18px 16px 22px;
     }
 
+    footer {
+        margin-top: 18px;
+        padding: 12px 8px;
+        font-size: 13px;
+    }
 }
 
 
-/* =====================================================
-   14. REDUCED MOTION ACCESSIBILITY
-   ===================================================== */
+/* ============================================
+   REDUCED MOTION ACCESSIBILITY
+   ============================================ */
 
 @media (prefers-reduced-motion: reduce) {
 
     nav a {
         transition: none;
     }
-
 }
 
-```
+/* =========================================
+   COLOUR DESIGN — MATCHING THE SAMPLE PAGE
+   ========================================= */
+
+body {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Course title */
+#course-title {
+    display: block;
+    background-color: #1d4e70;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #222222;
+}
+
+nav a {
+    flex: 1;
+    padding: 15px 10px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #444444;
+    color: #ffffff;
+    border-bottom-color: #f2f2f2;
+}
+
+/* Main heading */
+main h1 {
+    color: #1d4e70;
+    text-align: center;
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+/* Content cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Card heading bars */
+.card h2 {
+    background-color: #1d4e70;
+    color: #ffffff;
+    text-align: center;
+    padding: 13px 10px;
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+}
+
+/* Country heading */
+.country-section h3 {
+    color: #1d4e70;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 8px;
+}
+
+/* Resource links */
+.resources-card a {
+    color: #174f70;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+    color: #000000;
+    text-decoration-thickness: 2px;
+}
+
+/* Images */
+.portrait,
+.country-content img {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #1d4e70;
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 12px;
+    margin-top: 25px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+#lastModified {
+    color: #f2f2f2;
+    font-size: 0.9rem;
+}
+
+/* Mobile navigation */
+@media screen and (max-width: 560px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

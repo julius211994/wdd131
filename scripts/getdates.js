@@ -1,21 +1,12 @@
-```javascript
-// =========================================
 // WDD 131 – Dynamic Web Fundamentals
 // Author: Julius Conteh
-// =========================================
 
-
-// Get the current year.
-
+// Display the current copyright year
 const currentYear = new Date().getFullYear();
+document.querySelector("#currentyear").textContent = currentYear;
 
-document.getElementById("currentyear").textContent = currentYear;
-
-
-// Get the document's last modified date.
-
+// Display the date and time the document was last modified
 const lastModified = document.lastModified;
 
-document.getElementById("lastModified").textContent =
-    `Last Modification: ${ lastModified } `;
-```
+document.querySelector("#lastModified").textContent =
+    `Last Modification: ${lastModified} `;
