@@ -244,15 +244,12 @@ footer p {
     }
 
     .content-layout {
-        display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 20px;
-        align-items: stretch;
-        width: 100%;
+        gap: 18px;
     }
 
     .resources-card {
-        margin-top: 5px;
+        margin-top: 0;
     }
 }
 
