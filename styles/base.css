@@ -1,12 +1,9 @@
-/* ============================================
+/* =========================================
    WDD 131 – Dynamic Web Fundamentals
    Author: Julius Conteh
-   W01 Home Page
-   ============================================ */
+   ========================================= */
 
-
-/* CSS variables */
-
+/* 1. Colour variables */
 :root {
     --primary-color: #1d4e70;
     --navigation-color: #222222;
@@ -17,522 +14,32 @@
     --footer-color: #1d4e70;
 }
 
-
-/* General page styles */
-
+/* 2. General page styling */
 * {
     box-sizing: border-box;
 }
 
 body {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-
-    color: var(--text-color);
+    padding: 20px;
     background-color: var(--background-color);
-
-    font-family: var(--body-font);
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-
-/* ============================================
-   HEADER
-   ============================================ */
-
-header {
-    margin: 0;
-    color: #ffffff;
-}
-
-
-/* Course title */
-
-#course-title {
-    display: block;
-
-    padding: 15px 12px;
-
-    background-color: var(--primary-color);
-
-    color: #ffffff;
-
-    font-family: var(--heading-font);
-    font-size: 23px;
-    font-weight: 600;
-
-    text-align: center;
-}
-
-
-/* ============================================
-   NAVIGATION
-   ============================================ */
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-
-    background-color: var(--navigation-color);
-}
-
-nav a {
-    flex: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 45px;
-    padding: 10px 12px;
-
-    color: #ffffff;
-
-    font-size: 15px;
-    font-weight: 500;
-
-    text-align: center;
-    text-decoration: none;
-
-    /* Reserve border space to prevent layout shifts. */
-    border-bottom: 3px solid transparent;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-/* Navigation hover effect */
-
-nav a:hover {
-    color: #17252a;
-    background-color: var(--accent-color);
-    border-bottom-color: #086b68;
-}
-
-
-/* Keyboard navigation */
-
-nav a:focus-visible {
-    outline: 2px solid var(--accent-color);
-    outline-offset: -4px;
-}
-
-
-/* ============================================
-   MAIN CONTENT
-   ============================================ */
-
-main {
-    max-width: 900px;
-    margin: 22px auto;
-}
-
-
-/* Main heading */
-
-h1 {
-    margin: 0 0 20px;
-
     color: var(--text-color);
-
-    font-family: var(--heading-font);
-    font-size: 30px;
-    font-weight: 600;
-
-    text-align: center;
-}
-
-
-/* ============================================
-   CARD GRID
-   ============================================ */
-
-.content-layout {
-    display: grid;
-
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-
-    gap: 18px;
-    align-items: stretch;
-}
-
-
-/* Card appearance */
-
-.card {
-    min-width: 0;
-    overflow: hidden;
-
-    background-color: #ffffff;
-
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-}
-
-
-/* Card headings */
-
-.card h2 {
-    margin: 0;
-    padding: 10px;
-
-    color: #ffffff;
-    background-color: var(--primary-color);
-
-    font-family: var(--heading-font);
-    font-size: 19px;
-    font-weight: 600;
-
-    text-align: center;
-}
-
-
-/* ============================================
-   ABOUT ME
-   ============================================ */
-
-.about-introduction {
-    display: grid;
-
-    grid-template-columns: minmax(0, 1fr) 125px;
-
-    gap: 18px;
-    align-items: start;
-
-    padding: 16px;
-}
-
-.about-introduction p {
-    margin: 0;
-}
-
-
-/* Personal portrait */
-
-.portrait {
-    display: block;
-
-    width: 125px;
-    height: 155px;
-
-    object-fit: cover;
-    object-position: center top;
-
-    border: 1px solid var(--border-color);
-    border-radius: 2px;
-}
-
-
-/* ============================================
-   COUNTRY INFORMATION
-   ============================================ */
-
-.country-section {
-    margin: 0 16px 18px;
-}
-
-
-/* Country heading */
-
-.country-section h3 {
-    width: 70%;
-
-    margin: 0 auto 15px;
-    padding-bottom: 5px;
-
-    border-bottom: 1px solid #d6d6d6;
-
-    font-family: var(--heading-font);
-    font-size: 18px;
-    font-weight: 600;
-
-    text-align: center;
-}
-
-
-/* Flag and country description */
-
-.country-content {
-    display: grid;
-
-    grid-template-columns: 135px minmax(0, 1fr);
-
-    gap: 18px;
-    align-items: start;
-}
-
-
-/* Flag figure */
-
-.country-content figure {
-    margin: 0;
-
-    padding-top: 4px;
-
-    text-align: center;
-}
-
-.country-content img {
-    display: block;
-
-    width: 135px;
-    height: auto;
-
-    margin: 0 auto;
-
-    border: 1px solid var(--border-color);
-}
-
-
-/* Flag caption */
-
-.country-content figcaption {
-    margin-top: 6px;
-
-    color: #454545;
-
-    font-size: 12px;
-    font-style: italic;
-    line-height: 1.4;
-}
-
-
-/* Country description */
-
-.country-content p {
-    margin: 0;
-}
-
-
-/* ============================================
-   WEB DEVELOPMENT RESOURCES
-   ============================================ */
-
-.resources-card ul {
-    margin: 28px 18px;
-    padding-left: 22px;
-}
-
-.resources-card li {
-    margin-bottom: 8px;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 15px;
     line-height: 1.6;
 }
 
-
-/* Resource links */
-
-.resources-card a {
-    color: #0645ad;
-    text-decoration: underline;
-    text-underline-offset: 2px;
+h1,
+h2,
+h3 {
+    font-family: "Roboto Slab", Georgia, serif;
 }
 
-.resources-card a:hover {
-    color: #086b68;
-}
-
-.resources-card a:focus-visible {
-    outline: 2px solid #086b68;
-    outline-offset: 3px;
-}
-
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-footer {
-    margin-top: 24px;
-    padding: 15px 12px;
-
-    color: #ffffff;
-    background-color: var(--footer-color);
-
-    text-align: center;
-    font-size: 14px;
-}
-
-footer p {
-    margin: 4px 0;
-}
-
-#lastModified {
-    color: #ffffff;
-    font-size: 12px;
-}
-
-
-/* ============================================
-   TABLET RESPONSIVE DESIGN
-   ============================================ */
-
-@media screen and (max-width: 760px) {
-
-    body {
-        padding: 0 14px;
-    }
-
-    main {
-        margin: 18px auto;
-    }
-
-    .content-layout {
-        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-        gap: 12px;
-    }
-
-    .about-introduction {
-        grid-template-columns: minmax(0, 1fr) 100px;
-        gap: 12px;
-        padding: 12px;
-    }
-
-    .portrait {
-        width: 100px;
-        height: 125px;
-    }
-
-    .country-section {
-        margin-right: 12px;
-        margin-left: 12px;
-    }
-
-    .country-content {
-        grid-template-columns: 105px minmax(0, 1fr);
-        gap: 12px;
-    }
-
-    .country-content img {
-        width: 105px;
-    }
-
-    .resources-card ul {
-        margin: 20px 12px;
-        padding-left: 20px;
-    }
-}
-
-
-/* ============================================
-   MOBILE RESPONSIVE DESIGN
-   ============================================ */
-
-@media screen and (max-width: 560px) {
-
-    body {
-        padding: 0 10px;
-        font-size: 14px;
-    }
-
-    #course-title {
-        padding: 12px 8px;
-        font-size: 18px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-    }
-
-    nav a {
-        flex: 1 1 50%;
-        min-height: 42px;
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    main {
-        margin: 18px auto;
-    }
-
-    h1 {
-        margin-bottom: 15px;
-        font-size: 26px;
-    }
-
-    .content-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 18px;
-    }
-
-    .card h2 {
-        font-size: 18px;
-    }
-
-    .about-introduction {
-        grid-template-columns: minmax(0, 1fr) 90px;
-        gap: 12px;
-        padding: 12px;
-    }
-
-    .portrait {
-        width: 90px;
-        height: 115px;
-    }
-
-    .country-section {
-        margin: 0 12px 14px;
-    }
-
-    .country-section h3 {
-        width: 85%;
-        font-size: 17px;
-    }
-
-    .country-content {
-        grid-template-columns: 100px minmax(0, 1fr);
-        gap: 12px;
-    }
-
-    .country-content img {
-        width: 100px;
-    }
-
-    .country-content figcaption {
-        font-size: 11px;
-    }
-
-    .resources-card ul {
-        margin: 18px 16px 22px;
-    }
-
-    footer {
-        margin-top: 18px;
-        padding: 12px 8px;
-        font-size: 13px;
-    }
-}
-
-
-/* ============================================
-   REDUCED MOTION ACCESSIBILITY
-   ============================================ */
-
-@media (prefers-reduced-motion: reduce) {
-
-    nav a {
-        transition: none;
-    }
-}
-
-/* =========================================
-   COLOUR DESIGN — MATCHING THE SAMPLE PAGE
-   ========================================= */
-
-body {
-    background-color: #ffffff;
-    color: #222222;
-}
-
-/* Course title */
+/* 3. Course title */
 #course-title {
     display: block;
-    background-color: #1d4e70;
+    background-color: var(--primary-color);
     color: #ffffff;
     text-align: center;
     padding: 22px 15px;
@@ -540,12 +47,12 @@ body {
     font-weight: 700;
 }
 
-/* Navigation bar */
+/* 4. Navigation */
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #222222;
+    background-color: var(--navigation-color);
 }
 
 nav a {
@@ -556,37 +63,54 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     border-bottom: 3px solid transparent;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 nav a:hover,
 nav a:focus-visible {
     background-color: #444444;
     color: #ffffff;
-    border-bottom-color: #f2f2f2;
+    border-bottom-color: var(--accent-color);
 }
 
-/* Main heading */
+/* 5. Main content */
+main {
+    max-width: 1150px;
+    margin: 25px auto;
+}
+
 main h1 {
-    color: #1d4e70;
+    color: var(--primary-color);
     text-align: center;
-    border-bottom: 2px solid #cccccc;
+    border-bottom: 2px solid var(--border-color);
     padding-bottom: 12px;
     margin-bottom: 25px;
 }
 
-/* Content cards */
-.card {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+/* 6. Main content grid */
+.content-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
 }
 
-/* Card heading bars */
+/* 7. Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    height: auto;
+    min-height: 350px;
+}
+
+/* 8. Card headings */
 .card h2 {
-    background-color: #1d4e70;
+    background-color: var(--primary-color);
     color: #ffffff;
     text-align: center;
     padding: 13px 10px;
@@ -594,17 +118,90 @@ main h1 {
     font-size: 1.25rem;
 }
 
-/* Country heading */
+/* 9. About Me section */
+.about-card {
+    padding-bottom: 15px;
+}
+
+.about-introduction {
+    display: grid;
+    grid-template-columns: 1fr 125px;
+    gap: 15px;
+    align-items: start;
+    padding: 0 18px;
+}
+
+.about-introduction p {
+    margin-top: 0;
+}
+
+.portrait {
+    width: 100%;
+    max-width: 125px;
+    height: 160px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+/* 10. Country section */
+.country-section {
+    margin: 20px 18px 0;
+}
+
 .country-section h3 {
-    color: #1d4e70;
+    color: var(--primary-color);
     text-align: center;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 8px;
 }
 
-/* Resource links */
+.country-content {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+    gap: 15px;
+    align-items: start;
+}
+
+.country-content figure {
+    margin: 0;
+    text-align: center;
+}
+
+.country-content img {
+    width: 100%;
+    max-width: 135px;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+.country-content figcaption {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.country-content p {
+    margin-top: 0;
+}
+
+/* 11. Web development resources */
+.resources-card {
+    padding-bottom: 15px;
+}
+
+.resources-card ul {
+    padding: 0 25px 0 40px;
+    margin-top: 10px;
+}
+
+.resources-card li {
+    margin-bottom: 12px;
+}
+
 .resources-card a {
-    color: #174f70;
+    color: var(--primary-color);
     font-weight: 500;
     text-decoration: underline;
 }
@@ -615,16 +212,9 @@ main h1 {
     text-decoration-thickness: 2px;
 }
 
-/* Images */
-.portrait,
-.country-content img {
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-}
-
-/* Footer */
+/* 12. Footer */
 footer {
-    background-color: #1d4e70;
+    background-color: var(--footer-color);
     color: #ffffff;
     text-align: center;
     padding: 18px 12px;
@@ -640,14 +230,74 @@ footer p {
     font-size: 0.9rem;
 }
 
-/* Mobile navigation */
+/* 13. Tablet responsiveness */
+@media screen and (max-width: 760px) {
+    body {
+        padding: 15px;
+    }
+
+    .content-layout {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .resources-card {
+        margin-top: 5px;
+    }
+}
+
+/* 14. Mobile responsiveness */
 @media screen and (max-width: 560px) {
+    body {
+        padding: 10px;
+    }
+
+    #course-title {
+        font-size: 1.2rem;
+        padding: 18px 10px;
+    }
+
     nav {
         flex-direction: column;
     }
 
     nav a {
         width: 100%;
-        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .country-content {
+        grid-template-columns: 1fr;
+    }
+
+    .country-content figure {
+        margin-bottom: 10px;
+    }
+
+    .country-content img {
+        max-width: 160px;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 15. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    nav a {
+        transition: none;
     }
 }
