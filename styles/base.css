@@ -36,6 +36,13 @@ h3 {
     font-family: "Roboto Slab", Georgia, serif;
 }
 
+/* Header */
+header {
+    width: 100%;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+}
+
 /* 3. Course title */
 #course-title {
     display: block;
