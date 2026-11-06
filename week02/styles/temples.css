@@ -1,9 +1,7 @@
-/* Google Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
     --primary-color: #4a148c;
-    --secondary-color: #f3e5f5;
     --accent-color: #ffd54f;
     --text-color: #222;
 }
@@ -17,47 +15,77 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
-    background-color: #fff;
-    line-height: 1.6;
+    background-color: #ffffff;
+    line-height: 1.5;
 }
 
-/* Header */
+/* HEADER */
+
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
-    text-align: center;
 }
 
-header span {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
+.header-container {
     display: flex;
-    flex-direction: column;
-    gap: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 1rem;
 }
 
-nav a {
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* HAMBURGER BUTTON */
+
+#menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* MOBILE NAVIGATION */
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation li {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+}
+
+.navigation a {
     display: block;
     text-decoration: none;
     color: white;
-    padding: .75rem;
-    border-radius: 5px;
+    padding: .8rem;
+    text-align: center;
 }
 
-nav a:hover {
+.navigation a:hover {
     background-color: var(--accent-color);
     color: black;
 }
 
-/* Main */
+/* MAIN */
+
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -66,40 +94,49 @@ main {
 
 h1 {
     text-align: center;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-/* Grid Layout */
+/* TEMPLE GRID */
+
 .temple-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    justify-items: center;
 }
 
 figure {
-    background: var(--secondary-color);
-    padding: .75rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    width: 220px;
+    text-align: center;
 }
 
 figure img {
-    width: 100%;
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
     display: block;
-    border-radius: 5px;
+    margin: 0 auto;
 }
 
 figcaption {
-    text-align: center;
-    font-weight: 600;
-    margin-top: .5rem;
+    font-size: 0.7rem;
+    margin-top: .3rem;
 }
 
-/* Footer */
+/* FOOTER */
+
 footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
     text-align: center;
+    padding: .5rem;
     margin-top: 2rem;
+    font-size: .7rem;
+}
+
+footer p {
+    margin: .15rem 0;
 }
