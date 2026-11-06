@@ -15,7 +15,7 @@
 
     /* DESKTOP NAVIGATION */
 
-    nav.navigation {
+    .navigation {
         display: flex;
         position: static;
         width: auto;

@@ -48,6 +48,10 @@ header {
 
 /* MOBILE NAVIGATION */
 
+nav {
+    display: flex;
+}
+
 .navigation {
     display: none;
 }
