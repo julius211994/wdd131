@@ -1,0 +1,74 @@
+@media screen and (min-width: 768px) {
+
+    /* HEADER */
+
+    .header-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* HIDE HAMBURGER */
+
+    #menu {
+        display: none;
+    }
+
+    /* DESKTOP NAVIGATION */
+
+    .navigation {
+        display: block;
+        position: static;
+        width: auto;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .navigation li {
+        border: none;
+    }
+
+    .navigation a {
+        padding: 0;
+        font-size: .8rem;
+    }
+
+    .navigation a:hover {
+        background: none;
+        color: var(--accent-color);
+    }
+
+    /* MAIN */
+
+    main {
+        max-width: 800px;
+    }
+
+    /* TEMPLE GALLERY */
+
+    .temple-grid {
+        width: 700px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        justify-items: center;
+    }
+
+    figure {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 10 / 7;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+}
