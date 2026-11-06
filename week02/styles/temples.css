@@ -137,6 +137,10 @@ footer {
     font-size: .7rem;
 }
 
-footer p {
-    margin: .15rem 0;
+footer p:first-child {
+    font-weight: bold;
+}
+
+#lastModified {
+    font-size: 0.7rem;
 }
