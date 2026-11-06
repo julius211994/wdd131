@@ -16,7 +16,7 @@
     /* DESKTOP NAVIGATION */
 
     .navigation {
-        display: block;
+        display: flex;
         position: static;
         width: auto;
     }
