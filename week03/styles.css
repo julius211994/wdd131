@@ -1,3 +1,14 @@
+/* ROOT VARIABLES */
+:root {
+    --primary-color: #176B45;
+    --secondary-color: #A8D5B5;
+    --background-color: #EAF4EA;
+    --text-color: #26352C;
+    --weather-color: #245B78;
+    --weather-border: #B9D9E9;
+    --white-color: #FFFFFF;
+}
+
 /* =====================================================
    1. GENERAL PAGE STYLING
 ===================================================== */
