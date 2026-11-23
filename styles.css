@@ -1,0 +1,328 @@
+/* ROOT VARIABLES */
+:root {
+    --primary-color: #176B45;
+    --secondary-color: #A8D5B5;
+    --background-color: #EAF4EA;
+    --text-color: #26352C;
+    --weather-color: #245B78;
+    --weather-border: #B9D9E9;
+    --white-color: #FFFFFF;
+}
+
+/* =====================================================
+   1. GENERAL PAGE STYLING
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EAF4EA;
+    color: #26352C;
+}
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* =====================================================
+   2. HEADER
+===================================================== */
+
+header {
+    background-color: #176B45;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    border-bottom: 7px solid #A8D5B5;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* =====================================================
+   3. MAIN CONTENT
+===================================================== */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =====================================================
+   4. HERO IMAGE
+===================================================== */
+
+.hero {
+    width: 100%;
+    background-color: white;
+}
+
+.hero picture {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =====================================================
+   5. DATA SECTION
+===================================================== */
+
+.data-card {
+    background-color: white;
+    padding: 20px 20px 25px;
+    border-bottom: 1px solid #B6D8BF;
+}
+
+.data-card h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #26352C;
+    margin-bottom: 20px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 9px;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.info-row .label {
+    font-weight: bold;
+    text-align: right;
+}
+
+/* =====================================================
+   6. WEATHER SECTION
+===================================================== */
+
+.weather-card {
+    background-color: white;
+    padding: 20px 20px 25px;
+    text-align: center;
+    border-bottom: 1px solid #B9D9E9;
+}
+
+.weather-card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #26352C;
+    margin-bottom: 18px;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 18px;
+}
+
+.weather-svg {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+.weather-info {
+    font-size: 0.85rem;
+}
+
+.weather-info p {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 9px;
+    line-height: 1.3;
+}
+
+.weather-info .label {
+    font-weight: bold;
+}
+
+/* =====================================================
+   7. FOOTER
+===================================================== */
+
+footer {
+    background-color: #176B45;
+    color: white;
+    text-align: center;
+    padding: 13px 10px;
+    font-size: 0.75rem;
+    border-top: 5px solid #A8D5B5;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* =====================================================
+   8. TABLET AND DESKTOP LAYOUT
+===================================================== */
+
+@media (min-width: 768px) {
+
+    body {
+        padding: 25px 0;
+    }
+
+    .page {
+        width: 90%;
+        max-width: 1100px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr) 200px;
+        align-items: stretch;
+        position: relative;
+    }
+
+    /* ---------------------------------------------
+       HERO IMAGE
+    --------------------------------------------- */
+
+    .hero {
+        grid-column: 1 / 4;
+        grid-row: 1;
+        width: 100%;
+        height: 440px;
+        z-index: 0;
+    }
+
+    .hero picture {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ---------------------------------------------
+       DATA PANEL - LEFT SIDE
+    --------------------------------------------- */
+
+    .data-card {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        transform: translateY(-25px);
+        z-index: 1;
+
+        background-color: rgba(255, 255, 255, 0.97);
+        border: 1px solid #B6D8BF;
+
+        padding: 22px 10px 25px;
+        min-height: 300px;
+    }
+
+    .data-card h2 {
+        font-size: 1.05rem;
+        color: white;
+        background-color: #176B45;
+        padding: 8px 15px;
+        border-radius: 4px;
+        width: fit-content;
+        min-width: 100px;
+        margin: 0 auto 20px;
+        border-bottom: 3px solid #A8D5B5;
+        text-align: center;
+    }
+
+    .info-row {
+        display: block;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-bottom: 12px;
+    }
+
+    /* ---------------------------------------------
+       WEATHER PANEL - RIGHT SIDE
+    --------------------------------------------- */
+
+    .weather-card {
+        grid-column: 3;
+        grid-row: 1;
+        align-self: center;
+        transform: translateY(55px);
+        z-index: 1;
+
+        background-color: rgba(255, 255, 255, 0.97);
+        border: 1px solid #B9D9E9;
+
+        padding: 15px 10px 18px;
+        min-height: 220px;
+    }
+
+    .weather-card h2 {
+        font-size: 1.05rem;
+        color: white;
+        background-color: #245B78;
+        padding: 8px 15px;
+        border-radius: 4px;
+        width: fit-content;
+        min-width: 100px;
+        margin: 0 auto 13px;
+        border-bottom: 3px solid #B9D9E9;
+        text-align: center;
+    }
+
+    /* Desktop-only emoticon */
+
+    .weather-card h2::after {
+        content: " ☀️";
+        margin-left: 5px;
+    }
+
+    /* Hide mobile SVG in desktop view */
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-info {
+        font-size: 0.7rem;
+    }
+
+    .weather-info p {
+        display: block;
+        margin-bottom: 9px;
+    }
+}
+
+/* =====================================================
+   9. LARGE DESKTOP SCREENS
+===================================================== */
+
+@media (min-width: 1100px) {
+
+    .page {
+        max-width: 1100px;
+    }
+
+    main {
+        grid-template-columns: 200px minmax(0, 1fr) 200px;
+    }
+}
