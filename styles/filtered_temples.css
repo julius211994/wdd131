@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #4a148c;
+    --accent-color: #ffd54f;
+    --text-color: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* HEADER */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 1rem;
+}
+
+.site-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* MENU */
+
+#menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.navigation ul {
+    list-style: none;
+}
+
+.navigation li {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* TEMPLE GRID */
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.temple-card {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+}
+
+.temple-card h2 {
+    margin-bottom: .5rem;
+    color: #000;
+}
+
+.temple-card p {
+    margin: .2rem 0;
+    font-size: .9rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #5b2c83;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.temple-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center margin-top: .75rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+#lastModified {
+    font-size: .8rem;
+}
